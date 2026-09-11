@@ -1,0 +1,737 @@
+<!-- =========================================================================
+Bracket Ligue Europa 2026-2027 — bloc à coller dans un bloc
+WordPress « HTML personnalisé ».
+
+Généré par : node build-embed.js
+Journée affichée : 1
+
+⚠ NE PAS coller l'iframe seule. Le contenu d'une iframe n'est pas attribué à la
+page parente par Google : le texte ci-dessous EST le contenu indexé de l'article.
+Le widget, lui, apporte les résultats à jour et l'interactivité.
+
+⚠ Le balisage schema.org en bas décrit exactement les rencontres listées plus
+haut. Si vous supprimez la liste, supprimez le JSON-LD ; si vous changez de
+journée, régénérez les deux avec build-embed.js.
+========================================================================= -->
+
+<link rel="preconnect" href="https://jcrochet-netizen.github.io">
+
+<h2>Ligue Europa 2026-2027 : calendrier, classement et bracket</h2>
+
+<p>La phase de ligue de la Ligue Europa 2026-2027 s’ouvre le
+<strong>mercredi 16 septembre 2026</strong> et se referme le <strong>jeudi 28 janvier 2027</strong>.
+Les 36 clubs disputent 8 rencontres chacun, contre 8 adversaires différents : 4 à
+domicile, 4 à l’extérieur. Un classement unique départage ensuite les 36 équipes.</p>
+
+<p>Le tableau interactif ci-dessous réunit trois choses : <strong>les 18 matchs de chaque
+journée</strong> avec leurs résultats, <strong>le classement des 36 clubs</strong>, et
+<strong>l’arbre de la phase finale</strong> tel qu’il se dessinerait à l’instant t. Les
+données viennent de SportMonks : les résultats sont publiés après chaque coup de sifflet
+final, et le classement se recalcule dans la foulée.</p>
+
+<h3>Le bracket interactif de la Ligue Europa</h3>
+
+<style>
+/* Réserve la hauteur réelle du widget AVANT son chargement, sinon l'iframe grandit
+d'un coup et pousse tout le texte qui suit : c'est le décalage de mise en page que
+Google mesure (Cumulative Layout Shift). Valeurs relevées DANS UNE PAGE PARENTE
+RÉELLE, cache vidé, liste des matchs repliée — 2532 px dans un article de 900 px,
+2577 à 700, 2820 en mobile. Mesurer le widget seul ne suffit pas : dans un article
+il est plus étroit que le viewport, donc plus haut. Le script ci-dessous remplace
+ensuite cette réserve par la hauteur exacte. */
+#busa-c3b-fr{min-height:2535px}
+@media (max-width:760px){#busa-c3b-fr{min-height:2580px}}
+@media (max-width:520px){#busa-c3b-fr{min-height:2825px}}
+</style>
+
+<iframe id="busa-c3b-fr" src="https://jcrochet-netizen.github.io/bracket-c3-2627/bracket-c3.html" title="Bracket de la Ligue Europa 2026-2027 - matchs, classement et phase finale" loading="lazy" scrolling="no" referrerpolicy="strict-origin-when-cross-origin" style="display:block;margin:0 auto;width:100%;max-width:900px;border:0;overflow:hidden"></iframe>
+
+<noscript><p><a href="https://jcrochet-netizen.github.io/bracket-c3-2627/bracket-c3.html" rel="noopener">Ouvrir le bracket de la Ligue Europa 2026-2027 en plein écran</a> — le tableau interactif a besoin de JavaScript.</p></noscript>
+
+<script>
+// Ajuste la hauteur de l'iframe a son contenu, pour qu'aucune barre de defilement
+// interne n'apparaisse. Si le CMS filtre ce script, l'iframe reste parfaitement
+// lisible grace au min-height ci-dessus, qui est deja a la bonne hauteur.
+// NE JAMAIS REINDENTER : certains CMS remplacent l'espace de debut de ligne par
+// &nbsp;, ce qui produit une erreur de syntaxe et casse tout.
+(function(){
+var ORIGIN='https://jcrochet-netizen.github.io';
+var frame=document.getElementById('busa-c3b-fr');
+window.addEventListener('message',function(e){
+if(e.origin!==ORIGIN)return;
+var d=e.data;
+if(!d||d.type!=='busa-c3b-height')return;
+if(!frame)frame=document.getElementById('busa-c3b-fr');
+if(!frame)return;
+if(e.source!==frame.contentWindow)return;
+var h=parseInt(d.height,10);
+if(!h||h<1)return;
+frame.style.height=h+'px';
+frame.style.minHeight='0';
+},false);
+})();
+</script>
+
+<h3>Les matchs de la 1<sup>re</sup> journée</h3>
+
+<p>Coups d’envoi en heure française. L’UEFA programme en heure d’Europe centrale,
+qui correspond exactement à l’heure de Paris : aucune conversion n’est nécessaire.</p>
+
+<h4>Mercredi 16 septembre 2026</h4>
+
+<ul>
+<li><strong>Ararat-Armenia – Sparta Prague</strong>, 18h45 — Vazgen Sargsyan Republican Stadium, Yerevan.</li>
+<li><strong>Omonia Nicosie – Celta Vigo</strong>, 18h45 — Neo GSP (Nicosía (Levkosía)), Levkosía.</li>
+<li><strong>Anderlecht – Olympique Lyonnais</strong>, 21h00 — Lotto Park, Brussels.</li>
+<li><strong>Bayer Leverkusen – NK Celje</strong>, 21h00 — BayArena, Leverkusen.</li>
+<li><strong>Hapoël Beer-Sheva – Dinamo Zagreb</strong>, 21h00 — Stadionul Valentin Stănescu, Bucureşti.</li>
+<li><strong>AC Milan – Benfica</strong>, 21h00 — Stadio Giuseppe Meazza, Milano.</li>
+<li><strong>Olympiakos – Jagiellonia Białystok</strong>, 21h00 — Stadio Georgios Karaiskáki, Piraeus.</li>
+<li><strong>Sturm Graz – Stade Rennais</strong>, 21h00 — Merkur Arena, Graz.</li>
+<li><strong>Sunderland – AZ Alkmaar</strong>, 21h00 — Stadium of Light, Sunderland.</li>
+</ul>
+
+<h4>Jeudi 17 septembre 2026</h4>
+
+<ul>
+<li><strong>Levski Sofia – RB Salzbourg</strong>, 18h45 — Stadion Vasil Levski, Karlovo.</li>
+<li><strong>OFI Crète – Hoffenheim</strong>, 18h45 — Pankritio Stadio, Heraklion.</li>
+<li><strong>Beşiktaş – Olympique de Marseille</strong>, 21h00 — Beşiktaş Stadium, İstanbul.</li>
+<li><strong>Celtic – Ferencváros</strong>, 21h00 — Celtic Park, Glasgow.</li>
+<li><strong>Crystal Palace – Lech Poznań</strong>, 21h00 — Selhurst Park, London.</li>
+<li><strong>Juventus – NEC Nimègue</strong>, 21h00 — Juventus Stadium, Torino.</li>
+<li><strong>Lillestrøm – Torreense</strong>, 21h00 — Åråsen Stadion, Kjeller.</li>
+<li><strong>Real Sociedad – Bournemouth</strong>, 21h00 — Anoeta Stadium, San Sebastián.</li>
+<li><strong>Viktoria Plzeň – Union Saint-Gilloise</strong>, 21h00 — Doosan Aréna, Plzeň.</li>
+</ul>
+
+<h3>Comment se qualifie-t-on pour la phase finale ?</h3>
+
+<p>Le classement unique des 36 clubs décide de tout, à l’issue des 8 journées :</p>
+
+<ul>
+<li><strong>Du 1<sup>er</sup> au 8<sup>e</sup></strong> : qualifiés directement pour les huitièmes de finale.</li>
+<li><strong>Du 9<sup>e</sup> au 24<sup>e</sup></strong> : barrages en aller-retour, les moins bien classés recevant au match aller.</li>
+<li><strong>Du 25<sup>e</sup> au 36<sup>e</sup></strong> : éliminés, sans repêchage en Ligue Conférence.</li>
+</ul>
+
+<h3>Comment les égalités sont-elles départagées ?</h3>
+
+<p>À égalité de points, l’UEFA départage dans cet ordre (article 18 du règlement) :
+différence de buts, buts marqués, buts marqués à l’extérieur, nombre de victoires,
+victoires à l’extérieur, puis les points, la différence de buts et les buts marqués
+cumulés par les adversaires rencontrés, les points disciplinaires et enfin le
+coefficient UEFA. Il n’y a <strong>pas</strong> de confrontation directe : les 36 clubs
+ne s’affrontent pas tous.</p>
+
+<h3>Quand a lieu la finale de la Ligue Europa 2027 ?</h3>
+
+<p>La finale se joue le <strong>mercredi 26 mai 2027 au Waldstadion de Francfort</strong>.
+Le calendrier complet de la phase finale :</p>
+
+<ul>
+<li><strong>Barrages</strong> — tirage le 29 janvier 2027, matchs les 18 et 25 février 2027.</li>
+<li><strong>Huitièmes de finale</strong> — tirage le 26 février 2027, matchs les 11 et 18 mars 2027.</li>
+<li><strong>Quarts de finale</strong> — 8 et 15 avril 2027.</li>
+<li><strong>Demi-finales</strong> — 29 avril et 6 mai 2027.</li>
+<li><strong>Finale</strong> — mercredi 26 mai 2027, Waldstadion, Francfort.</li>
+</ul>
+
+<h3>Les 36 clubs de la phase de ligue 2026-2027</h3>
+
+<p>AC Milan, Anderlecht, Ararat-Armenia, AZ Alkmaar, Bayer Leverkusen, Benfica, Beşiktaş, Bournemouth, Celta Vigo, Celtic, Crystal Palace, Dinamo Zagreb, Ferencváros, Hapoël Beer-Sheva, Hoffenheim, Jagiellonia Białystok, Juventus, Lech Poznań, Levski Sofia, Lillestrøm, NEC Nimègue, NK Celje, OFI Crète, Olympiakos, Olympique de Marseille, Olympique Lyonnais, Omonia Nicosie, RB Salzbourg, Real Sociedad, Sparta Prague, Stade Rennais, Sturm Graz, Sunderland, Torreense, Union Saint-Gilloise, Viktoria Plzeň.</p>
+
+<p>Trois clubs français sont engagés : l’<strong>Olympique Lyonnais</strong>,
+l’<strong>Olympique de Marseille</strong> et le <strong>Stade Rennais</strong>.</p>
+
+<!-- =========================================================================
+Données structurées : une fiche SportsEvent par rencontre de la journée
+1, celles listées plus haut dans la page. Rien d'autre n'est balisé.
+
+Volontairement ABSENTS de ce bloc, parce que Yoast / Rank Math les
+produisent déjà pour toute la page et qu'un doublon est une erreur :
+Article, WebPage, Organization, BreadcrumbList.
+========================================================================= -->
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@graph": [
+{
+"@type": "SportsEvent",
+"name": "Ararat-Armenia – Sparta Prague",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-16T18:45:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Vazgen Sargsyan Republican Stadium",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Yerevan",
+"addressCountry": "AM"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Ararat-Armenia",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/2610304.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Sparta Prague",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50033.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Omonia Nicosie – Celta Vigo",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-16T18:45:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Neo GSP (Nicosía (Levkosía))",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Levkosía",
+"addressCountry": "CY"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Omonia Nicosie",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50077.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Celta Vigo",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/53043.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Anderlecht – Olympique Lyonnais",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-16T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Lotto Park",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Brussels",
+"addressCountry": "BE"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Anderlecht",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50074.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Olympique Lyonnais",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/5312.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Bayer Leverkusen – NK Celje",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-16T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "BayArena",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Leverkusen",
+"addressCountry": "DE"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Bayer Leverkusen",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50109.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "NK Celje",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/59030.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Hapoël Beer-Sheva – Dinamo Zagreb",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-16T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Stadionul Valentin Stănescu",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Bucureşti",
+"addressCountry": "RO"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Hapoël Beer-Sheva",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/59340.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Dinamo Zagreb",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50164.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "AC Milan – Benfica",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-16T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Stadio Giuseppe Meazza",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Milano",
+"addressCountry": "IT"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "AC Milan",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50058.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Benfica",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50147.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Olympiakos – Jagiellonia Białystok",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-16T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Stadio Georgios Karaiskáki",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Piraeus",
+"addressCountry": "GR"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Olympiakos",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/2610.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Jagiellonia Białystok",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/2600277.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Sturm Graz – Stade Rennais",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-16T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Merkur Arena",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Graz",
+"addressCountry": "AT"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Sturm Graz",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50111.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Stade Rennais",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/55031.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Sunderland – AZ Alkmaar",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-16T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Stadium of Light",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Sunderland",
+"addressCountry": "GB"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Sunderland",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/53360.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "AZ Alkmaar",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/52327.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Levski Sofia – RB Salzbourg",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-17T18:45:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Stadion Vasil Levski",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Karlovo",
+"addressCountry": "BG"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Levski Sofia",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50044.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "RB Salzbourg",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50030.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "OFI Crète – Hoffenheim",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-17T18:45:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Pankritio Stadio",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Heraklion"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "OFI Crète",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/52953.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Hoffenheim",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/2600431.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Beşiktaş – Olympique de Marseille",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-17T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Beşiktaş Stadium",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "İstanbul",
+"addressCountry": "TR"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Beşiktaş",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50157.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Olympique de Marseille",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/52748.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Celtic – Ferencváros",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-17T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Celtic Park",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Glasgow",
+"addressCountry": "GB"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Celtic",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50050.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Ferencváros",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/52298.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Crystal Palace – Lech Poznań",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-17T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Selhurst Park",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "London",
+"addressCountry": "GB"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Crystal Palace",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/52916.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Lech Poznań",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/64227.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Juventus – NEC Nimègue",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-17T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Juventus Stadium",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Torino",
+"addressCountry": "IT"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Juventus",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50139.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "NEC Nimègue",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/52330.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Lillestrøm – Torreense",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-17T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Åråsen Stadion",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Kjeller",
+"addressCountry": "NO"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Lillestrøm",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/52314.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Torreense",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/2603107.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Real Sociedad – Bournemouth",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-17T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Anoeta Stadium",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "San Sebastián",
+"addressCountry": "ES"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Real Sociedad",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/50123.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Bournemouth",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/2601124.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+},
+{
+"@type": "SportsEvent",
+"name": "Viktoria Plzeň – Union Saint-Gilloise",
+"description": "1re journée de la phase de ligue de la Ligue Europa 2026-2027.",
+"startDate": "2026-09-17T21:00:00+02:00",
+"eventStatus": "https://schema.org/EventScheduled",
+"eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+"location": {
+"@type": "Place",
+"name": "Doosan Aréna",
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Plzeň",
+"addressCountry": "CZ"
+}
+},
+"homeTeam": {
+"@type": "SportsTeam",
+"name": "Viktoria Plzeň",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/64388.png"
+},
+"awayTeam": {
+"@type": "SportsTeam",
+"name": "Union Saint-Gilloise",
+"logo": "https://img.uefa.com/imgml/TP/teams/logos/100x100/64125.png"
+},
+"organizer": {
+"@type": "SportsOrganization",
+"name": "UEFA",
+"url": "https://www.uefa.com/"
+}
+}
+]
+}
+</script>

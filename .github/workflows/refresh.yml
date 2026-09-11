@@ -1,0 +1,71 @@
+name: Refresh UEL 26-27 results
+
+# Régénère les data-*.json depuis SportMonks et les commit s'ils ont changé.
+#
+# Le widget n'affiche AUCUN score en direct : un match n'a de résultat que
+# lorsqu'il est terminé. Mais planifier le relevé sur des horaires fixes ne
+# marchait pas : en heure d'hiver, un cron à 19h50 UTC tombait à la minute
+# près sur la fin des matchs de 18h45, sans aucune marge.
+#
+# Le rendez-vous est donc pris par le script, pas par l'horloge. fetch-data.js
+# lit les heures de coup d'envoi déjà présentes dans data.json et n'appelle
+# SportMonks que s'il existe un match sans résultat dont le coup d'envoi
+# remonte à plus de 2 h 05. La quasi-totalité des exécutions ci-dessous
+# s'arrêtent donc sans consommer un seul appel d'API — ce qui permet de
+# passer souvent, et donc de publier les résultats vite.
+on:
+  schedule:
+    # Fenêtre des fins de match (18h50 à 22h05 UTC selon le régime horaire),
+    # tous les jours : l'UEFA déplace des rencontres, la finale se joue un
+    # samedi, et le portillon rend ces passages quasi gratuits.
+    - cron: "*/30 18-23 * * *"
+    # Filet quotidien, celui-là forcé : calendrier, reports, tirages.
+    - cron: "20 5 * * *"
+  workflow_dispatch: {}         # bouton « Run workflow » : forcé lui aussi
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-uel-bracket
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
+      - name: Fetch SportMonks data
+        env:
+          SPORTMONKS_API_TOKEN: ${{ secrets.SPORTMONKS_API_TOKEN }}
+          # Le filet quotidien et le déclenchement manuel passent outre le
+          # portillon : ce sont eux qui rattrapent un calendrier modifié, un
+          # match reporté ou un tirage de phase finale, choses qu'aucune heure
+          # de coup d'envoi ne permet de deviner.
+          FORCE_REFRESH: ${{ github.event_name == 'workflow_dispatch' || github.event.schedule == '20 5 * * *' }}
+        run: node fetch-data.js
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # `updatedAt` bouge à chaque exécution : on compare les fichiers SANS
+          # ce champ, sinon le cron produirait un commit toutes les 10 minutes
+          # même quand aucun score n'a changé. (Le JSON tient sur une seule
+          # ligne, donc `git diff -I` ne peut pas faire ce travail.)
+          if node .github/data-changed.js; then
+            git add data*.json
+            git commit -m "chore: refresh UEL 26-27 data [skip ci]"
+            git push
+            echo "Données mises à jour et poussées."
+          else
+            echo "Aucun résultat nouveau — rien à commit."
+            git checkout -- 'data*.json' || true
+          fi

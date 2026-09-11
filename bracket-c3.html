@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ligue Europa 2026-2027 : calendrier, résultats, classement et bracket</title>
+<meta name="description" content="Les 8 journées de la phase de ligue de la Ligue Europa 2026-2027, les résultats, le classement des 36 clubs et l'arbre de la phase finale projeté à l'instant t.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Ligue Europa 2026-2027 — calendrier, classement et bracket">
+<meta property="og:description" content="Calendrier journée par journée, résultats, classement des 36 clubs et bracket de la phase finale, mis à jour automatiquement.">
+</head>
+<body style="margin:0;padding:0;background:#fff;">
+
+<!-- ================= DÉBUT DU BLOC À COLLER ================= -->
+<div id="c3b" class="c3b" data-lang="fr" data-src="data.json">
+<style>
+/* ---------------------------------------------------------------- Thème */
+.c3b{
+  --g:#ffffff; --sf:#f5f7f9; --sf2:#eef1f5; --ln:#e3e7ec;
+  --ink:#14171c; --ink2:#5a626e; --ink3:#8d95a1;
+  --acc:#0b2f7a;            /* bleu UEFA */
+  --acc-soft:rgba(11,47,122,.09);
+  --acc-on:#ffffff;         /* texte posé SUR l'accent */
+  --ok:#1a7f43; --ok-soft:rgba(26,127,67,.10);
+  --po:#b26a00; --po-soft:rgba(178,106,0,.10);
+  --out:#98a0ac;
+  --live:#d92d20;
+  --brl:#c3ccd7;          /* traits de l'arbre */
+  --crest-bg:none; --crest-pad:0;
+
+  container-type:inline-size; container-name:c3b;
+  max-width:900px; margin:0 auto; background:var(--g); color:var(--ink);
+  border:1px solid var(--ln); border-radius:14px; overflow:hidden;
+  font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:16px; line-height:1.45; text-align:left; -webkit-font-smoothing:antialiased;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .c3b:not([data-c3b-theme="light"]){
+    --g:#0f1216; --sf:#171b21; --sf2:#1d222a; --ln:#262c35;
+    --ink:#e9ecf0; --ink2:#9aa2ae; --ink3:#6d7683;
+    --acc:#7ea6ff; --acc-soft:rgba(126,166,255,.13); --acc-on:#0f1216;
+    --ok:#4ec97f; --ok-soft:rgba(78,201,127,.13);
+    --po:#f0a94a; --po-soft:rgba(240,169,74,.13);
+    --out:#5f6771; --live:#ff6b60; --brl:#3b4450;
+    --crest-bg:#eef1f5; --crest-pad:.18rem;
+  }
+}
+:root[data-theme="dark"] .c3b:not([data-c3b-theme="light"]){
+  --g:#0f1216; --sf:#171b21; --sf2:#1d222a; --ln:#262c35;
+  --ink:#e9ecf0; --ink2:#9aa2ae; --ink3:#6d7683;
+  --acc:#7ea6ff; --acc-soft:rgba(126,166,255,.13); --acc-on:#0f1216;
+  --ok:#4ec97f; --ok-soft:rgba(78,201,127,.13);
+  --po:#f0a94a; --po-soft:rgba(240,169,74,.13);
+  --out:#5f6771; --live:#ff6b60; --brl:#3b4450;
+  --crest-bg:#eef1f5; --crest-pad:.18rem;
+}
+.c3b *,.c3b *::before,.c3b *::after{box-sizing:border-box;}
+.c3b p,.c3b h2,.c3b h3,.c3b h4,.c3b ol,.c3b ul,.c3b li,.c3b table,.c3b figure{margin:0;padding:0;}
+.c3b ol,.c3b ul{list-style:none;}
+.c3b button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;}
+
+/* ---------------------------------------------------------------- En-tête */
+.c3b .hd{
+  display:flex; flex-wrap:wrap; gap:.6rem 1rem; align-items:center; justify-content:space-between;
+  padding:.95rem 1rem .8rem; border-bottom:1px solid var(--ln);
+}
+.c3b .hd-id{min-width:0;}
+.c3b .eyebrow{font-size:.62rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--ink3);}
+.c3b .hd-t{font-size:1.15rem; font-weight:650; letter-spacing:-.02em; line-height:1.2;}
+.c3b .hd-meta{display:flex; align-items:center; gap:.45rem; font-size:.72rem; color:var(--ink3); white-space:nowrap;}
+
+/* ------------------------------------------------------------ Sections */
+.c3b .sec{padding:1rem; border-top:1px solid var(--ln);}
+.c3b .sec:first-of-type{border-top:0;}
+.c3b .sec-hd{display:flex; align-items:baseline; justify-content:space-between; gap:.75rem; margin-bottom:.7rem; flex-wrap:wrap;}
+.c3b .sec-t{font-size:.7rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; color:var(--ink2);
+  display:flex; align-items:center; gap:.5rem;}
+.c3b .sec-t::before{content:""; width:3px; height:.85rem; border-radius:2px; background:var(--acc);}
+.c3b .sec-note{font-size:.72rem; color:var(--ink3);}
+
+/* ------------------------------------------------------- Sélecteur de journée */
+.c3b .md-nav{display:flex; gap:.3rem; overflow-x:auto; padding-bottom:.3rem; scrollbar-width:none; margin-bottom:.55rem;}
+.c3b .md-nav::-webkit-scrollbar{display:none;}
+.c3b .md-nav button{
+  flex:1 0 auto; min-width:2.9rem; text-align:center; padding:.34rem .5rem;
+  font-size:.78rem; font-weight:600; color:var(--ink2);
+  border:1px solid var(--ln); border-radius:9px; background:var(--sf);
+  transition:background .15s,color .15s,border-color .15s;
+}
+.c3b .md-nav button:hover{background:var(--sf2); color:var(--ink);}
+.c3b .md-nav button[aria-pressed="true"]{background:var(--acc-soft); border-color:var(--acc); color:var(--acc);}
+.c3b .md-sub{font-size:.74rem; color:var(--ink3); margin-bottom:.5rem;}
+
+/* --------------------------------------------------------------- Matchs */
+.c3b .day{
+  font-size:.65rem; font-weight:650; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink3); padding:.7rem .1rem .35rem;
+}
+.c3b .m{
+  display:grid; grid-template-columns:1fr 4.6rem 1fr; align-items:center; gap:.5rem;
+  padding:.45rem .35rem; border-top:1px solid var(--ln); border-radius:8px;
+}
+.c3b .day + .m{border-top:0;}
+.c3b .m.hl{background:var(--acc-soft);}
+.c3b .side{display:flex; align-items:center; gap:.5rem; min-width:0;}
+.c3b .side.h{justify-content:flex-end;}
+.c3b .side.h .nm{text-align:right;}
+.c3b .nm{min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  font-size:.86rem; font-weight:500;}
+.c3b .nm .sm{display:none;}
+.c3b .nm.win{font-weight:700;}
+.c3b .m.done .nm:not(.win){color:var(--ink2);}
+.c3b .crest{flex:none; width:1.45rem; height:1.45rem; display:grid; place-items:center;
+  border-radius:50%; background:var(--crest-bg); padding:var(--crest-pad); overflow:hidden;}
+.c3b .crest img{width:100%; height:100%; object-fit:contain; display:block;}
+.c3b .sc{
+  text-align:center; font-variant-numeric:tabular-nums; line-height:1.15;
+  border-radius:7px; padding:.2rem .1rem; background:var(--sf);
+}
+.c3b .sc b{font-size:.92rem; font-weight:700; letter-spacing:.02em;}
+.c3b .sc .t{font-size:.82rem; font-weight:600; color:var(--ink2);}
+.c3b .sc .st{display:block; font-size:.58rem; font-weight:700; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--ink3); margin-top:.05rem;}
+.c3b .sc.off .t{text-decoration:line-through;}
+.c3b .more{
+  display:flex; align-items:center; justify-content:center; gap:.45rem;
+  width:100%; margin-top:.6rem; padding:.46rem .7rem;
+  font-size:.76rem; font-weight:600; color:var(--acc);
+  background:var(--sf); border:1px solid var(--ln); border-radius:9px;
+  transition:background .15s,border-color .15s;
+}
+.c3b .more:hover{background:var(--sf2); border-color:var(--acc);}
+.c3b .more .n{font-weight:500; color:var(--ink3);}
+.c3b .more::after{
+  content:""; width:.4rem; height:.4rem; flex:none;
+  border-right:1.7px solid currentColor; border-bottom:1.7px solid currentColor;
+  transform:translateY(-25%) rotate(45deg);
+}
+.c3b .more[aria-expanded="true"]::after{transform:translateY(25%) rotate(-135deg);}
+
+/* ----------------------------------------------------------- Classement */
+.c3b .tools{display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;}
+
+.c3b table{width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums;}
+.c3b thead th{
+  font-size:.6rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--ink3); text-align:right; padding:.3rem .28rem; border-bottom:1px solid var(--ln); white-space:nowrap;
+}
+.c3b thead th.l{text-align:left;}
+.c3b tbody td{padding:.3rem .28rem; font-size:.8rem; text-align:right; border-bottom:1px solid var(--ln);}
+.c3b tbody tr:last-child td{border-bottom:0;}
+.c3b tbody tr{cursor:pointer;}
+.c3b tbody tr:hover td{background:var(--sf);}
+.c3b tbody tr.hl td{background:var(--acc-soft);}
+.c3b td.pos{
+  text-align:center; width:2rem; font-size:.72rem; font-weight:700; color:var(--ink2);
+  border-left:3px solid transparent; padding-left:.35rem;
+}
+.c3b tr.z-ok td.pos{border-left-color:var(--ok); color:var(--ok);}
+.c3b tr.z-po td.pos{border-left-color:var(--po); color:var(--po);}
+.c3b tr.z-out td.pos{border-left-color:transparent; color:var(--ink3);}
+.c3b tr.z-out td{color:var(--ink2);}
+.c3b td.club{text-align:left; width:100%;}
+.c3b td.club .side{gap:.45rem;}
+.c3b td.pts{font-weight:750; font-size:.85rem;}
+.c3b td.gd .p{color:var(--ok);} .c3b td.gd .n{color:var(--live);}
+.c3b .form{display:inline-flex; gap:.14rem; vertical-align:middle;}
+.c3b .form i{
+  width:.9rem; height:.9rem; border-radius:3px; display:grid; place-items:center;
+  font-size:.52rem; font-weight:800; font-style:normal; color:#fff; background:var(--out);
+}
+.c3b .form i.W{background:var(--ok);} .c3b .form i.D{background:var(--ink3);} .c3b .form i.L{background:var(--live);}
+.c3b .legend{display:flex; gap:.9rem; flex-wrap:wrap; font-size:.68rem; color:var(--ink3); margin-top:.6rem;}
+.c3b .legend span{display:inline-flex; align-items:center; gap:.35rem;}
+.c3b .legend i{width:.5rem; height:.5rem; border-radius:2px; display:inline-block;}
+
+/* -------------------------------------------------------------- Bracket */
+.c3b .br-wrap{overflow-x:auto; -webkit-overflow-scrolling:touch; padding-bottom:.4rem; scrollbar-width:thin;}
+.c3b .br{--gp:16px; display:grid; grid-template-columns:repeat(5,minmax(10.4rem,1fr));
+  column-gap:var(--gp); min-width:55rem;}
+.c3b .br-hd{font-size:.6rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink3); text-align:center; padding-bottom:.45rem;}
+.c3b .br-hd em{display:block; font-style:normal; font-weight:500; letter-spacing:0; text-transform:none;
+  font-size:.62rem; color:var(--ink3); opacity:.75;}
+.c3b .col{display:grid; grid-template-rows:repeat(8,minmax(0,1fr)); row-gap:0;}
+.c3b .cell{position:relative; display:flex; align-items:center; padding:.18rem 0;}
+.c3b .cell::after{
+  content:""; position:absolute; left:100%; width:calc(var(--gp)/2);
+  border-color:var(--brl); border-style:solid; border-width:0;
+}
+.c3b .cell.up::after{top:50%; height:50%; border-top-width:1px; border-right-width:1px;}
+.c3b .cell.dn::after{bottom:50%; height:50%; border-bottom-width:1px; border-right-width:1px;}
+.c3b .cell.flat::after{top:50%; height:0; border-top-width:1px;}
+.c3b .cell.in::before{
+  content:""; position:absolute; right:100%; width:calc(var(--gp)/2); top:50%;
+  border-top:1px solid var(--brl);
+}
+.c3b .cell.end::after{display:none;}
+.c3b .tie{width:100%; border:1px solid var(--ln); border-radius:9px; overflow:hidden; background:var(--sf);}
+.c3b .tie .row{
+  display:flex; align-items:center; gap:.4rem; width:100%; padding:.28rem .4rem;
+  font-size:.74rem; text-align:left; transition:background .15s;
+}
+.c3b .tie .row + .row{border-top:1px solid var(--ln);}
+.c3b .tie .row:hover:not(:disabled){background:var(--sf2);}
+.c3b .tie .row:disabled{cursor:default; color:var(--ink3);}
+.c3b .tie .row .seed{
+  flex:none; min-width:2.35rem; text-align:center; font-size:.56rem; font-weight:750;
+  color:var(--ink3); background:var(--g); border-radius:4px; padding:.05rem .15rem;
+  font-variant-numeric:tabular-nums; letter-spacing:-.01em;
+}
+.c3b .tie .row .crest{width:1.15rem; height:1.15rem;}
+.c3b .tie .row .nm{font-size:.74rem;}
+.c3b .tie .row.pick{background:var(--acc-soft);}
+.c3b .tie .row.pick .nm{font-weight:700; color:var(--acc);}
+.c3b .tie .row.drop{opacity:.4;}
+.c3b .tie .row.ghost{color:var(--ink3); font-style:italic;}
+.c3b .tie .row.hl{outline:2px solid var(--acc); outline-offset:-2px;}
+/* Le club qui reçoit au match retour : liseré à gauche, comme le trait de
+   la légende du schéma UEFA. */
+.c3b .tie .row.retour{box-shadow:inset 3px 0 0 var(--ink3);}
+.c3b .tie .row.retour.pick{box-shadow:inset 2px 0 0 var(--acc);}
+/* L'étiquette du côté est posée AU-DESSUS de la boîte sans occuper de place :
+   sinon elle décale la demi-finale hors du milieu de ses deux quarts, et les
+   traits de l'arbre ne pointent plus au bon endroit. */
+.c3b .half{width:100%; position:relative;}
+.c3b .half-t{
+  position:absolute; bottom:100%; left:0; right:0;
+  display:flex; align-items:center; gap:.3rem; justify-content:center;
+  font-size:.56rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink3); padding-bottom:.3rem;
+}
+.c3b .half-t i{width:.45rem; height:.45rem; border-radius:50%; display:inline-block;}
+.c3b .br-leg{
+  display:flex; gap:1rem; flex-wrap:wrap; align-items:center;
+  font-size:.66rem; color:var(--ink3); margin-top:.5rem;
+}
+.c3b .br-leg span{display:inline-flex; align-items:center; gap:.35rem;}
+.c3b .br-leg u{
+  width:2px; height:.8rem; background:var(--ink3); display:inline-block; text-decoration:none;
+}
+.c3b .tie.final .row{padding:.4rem .45rem;}
+.c3b .tie.champ{border-color:var(--acc); background:var(--acc-soft);}
+.c3b .cup{display:flex; align-items:center; justify-content:center; gap:.4rem; padding:.35rem 0 0;
+  font-size:.6rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--acc);}
+.c3b .br-out{margin-top:.85rem; padding-top:.7rem; border-top:1px dashed var(--ln);}
+.c3b .br-out h4{font-size:.62rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ink3); margin-bottom:.4rem;}
+.c3b .chips{display:flex; flex-wrap:wrap; gap:.3rem;}
+.c3b .chip{display:inline-flex; align-items:center; gap:.3rem; font-size:.7rem; color:var(--ink2);
+  border:1px solid var(--ln); border-radius:20px; padding:.15rem .5rem .15rem .25rem; background:var(--sf);}
+.c3b .chip .crest{width:1.05rem; height:1.05rem;}
+.c3b .chip.hl{border-color:var(--acc); color:var(--acc);}
+.c3b .btn{
+  font-size:.72rem; font-weight:600; color:var(--ink2); background:var(--sf);
+  border:1px solid var(--ln); border-radius:20px; padding:.26rem .7rem; transition:background .15s,color .15s;
+}
+.c3b .btn:hover{background:var(--sf2); color:var(--ink);}
+.c3b .btn.pri{color:var(--acc); border-color:var(--acc); background:var(--acc-soft);}
+/* Le bouton du tirage est l'invitation à jouer : c'est le seul plein de la
+   page, pour qu'on le voie avant de lire la note. */
+.c3b .btn.draw{
+  color:var(--acc-on); background:var(--acc); border-color:var(--acc);
+  font-weight:700; padding:.34rem .9rem; box-shadow:0 1px 3px rgba(0,0,0,.13);
+}
+.c3b .btn.draw:hover{color:var(--acc-on); filter:brightness(1.12);}
+.c3b .btn.draw:active{transform:translateY(1px);}
+.c3b .btn.draw .d{font-size:.9rem; line-height:1; margin-right:.35rem;}
+.c3b .drawn{
+  display:inline-flex; align-items:center; gap:.35rem; margin-top:.3rem;
+  font-size:.7rem; font-weight:600; color:var(--acc);
+  background:var(--acc-soft); border-radius:20px; padding:.16rem .6rem;
+}
+.c3b .hint{display:flex; align-items:center; justify-content:center; gap:.35rem;
+  font-size:.66rem; color:var(--ink3); padding:.3rem 0 .45rem;}
+@container c3b (min-width:880px){ .c3b .hint{display:none;} }
+
+/* -------------------------------------------------------------- Pied / états */
+.c3b .ft{padding:.7rem 1rem .9rem; border-top:1px solid var(--ln); font-size:.66rem; color:var(--ink3);}
+.c3b .ft a{color:inherit;}
+.c3b .load{padding:3rem 1rem; text-align:center; color:var(--ink3); font-size:.82rem;}
+
+/* ------------------------------------------------------------- Étroit */
+@container c3b (max-width:640px){
+  .c3b .col-opt{display:none;}
+  /* Les 8 pastilles de journée se partagent la largeur au lieu de défiler. */
+  .c3b .md-nav button{flex:1 1 0; min-width:0; padding:.34rem .2rem;}
+  .c3b .m{grid-template-columns:1fr 4.2rem 1fr; gap:.35rem;}
+  .c3b .nm{font-size:.8rem;}
+  .c3b .sec{padding:.85rem .7rem;}
+  .c3b .hd{padding:.85rem .7rem .7rem;}
+}
+@container c3b (max-width:520px){
+  /* Sous cette largeur, « Borussia Dort… » ne dit plus rien : on bascule sur
+     le nom court, qui tient en entier. */
+  .c3b .nm .lg{display:none;}
+  .c3b .nm .sm{display:inline;}
+}
+@container c3b (max-width:430px){
+  .c3b .col-opt2{display:none;}
+}
+</style>
+
+<div class="hd">
+  <div class="hd-id">
+    <div class="eyebrow" data-i="eyebrow"></div>
+    <div class="hd-t" data-i="title"></div>
+  </div>
+  <div class="hd-meta" id="c3b-meta"></div>
+</div>
+
+<div id="c3b-body"><div class="load" data-i="loading"></div></div>
+
+<div class="ft" data-i="footer"></div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var ROOT = document.getElementById("c3b");
+  var LANG = ROOT.getAttribute("data-lang");
+  var SRC  = ROOT.getAttribute("data-src");
+
+  /* ------------------------------------------------------------------ i18n */
+  var L10N = {
+    fr:{ locale:"fr-FR", tz:"Europe/Paris",
+      eyebrow:"Ligue Europa 2026-2027", title:"Calendrier, classement et bracket",
+      loading:"Chargement des données…", error:"Données indisponibles pour le moment.",
+      updated:"Mis à jour", ft:"Fin", off:"Reporté",
+      mdTitle:"Les matchs, journée par journée", md:"J", matchday:"Journée",
+      seeAllR:"Voir tous les résultats", seeAllM:"Voir tous les matchs", collapse:"Réduire", nMatches:"matchs",
+      played:"joués", of:"sur",
+      stTitle:"Le classement",
+      cPos:"#", cClub:"Club", cP:"J", cW:"G", cD:"N", cL:"P", cGF:"BP", cGA:"BC", cGD:"+/−", cPts:"Pts", cForm:"Forme", fW:"V", fD:"N", fL:"D",
+      zOk:"1-8 · qualifiés pour les 8es", zPo:"9-24 · barrages", zOut:"25-36 · éliminés",
+      noGames:"Aucun match joué : les 36 clubs sont à égalité et listés par ordre alphabétique. Le classement prendra forme dès la 1re journée.",
+      brTitle:"L'arbre de la phase finale",
+      brNote:"Projection d’après le classement. Les barrages opposent des paires : « 21/22 » affronte « 11/12 » — le tirage décidera lequel des deux clubs de chaque paire part de ce côté. Cliquez sur une équipe pour la faire avancer.",
+      brDrawn:"Tirage effectué : rencontres réelles.",
+      rPo:"Barrages", rR16:"8es de finale", rQf:"Quarts", rSf:"Demies", rF:"Finale",
+      silver:"Côté argenté", blue:"Côté bleu", secondLeg:"reçoit au match retour", finalHome:"L’équipe du côté argenté est l’équipe recevante en finale.",
+      champion:"Vainqueur", tbd:"Vainqueur B", auto:"Remplir d'après le classement", clear:"Effacer",
+      draw:"Simuler le tirage", drawn:"Tirage simulé — relancez pour un autre", drawReal:"Le vrai tirage des barrages a lieu le 29 janvier 2027.",
+      outTitle:"Éliminés (25e-36e)", scroll:"Faites défiler pour voir tout l'arbre",
+      footer:"Données SportMonks, actualisées automatiquement. Classement selon l’article 18 du règlement UEFA : points, différence de buts, buts marqués, buts marqués à l’extérieur, victoires, victoires à l’extérieur, puis points, différence de buts et buts cumulés des adversaires, points disciplinaires." },
+    en:{ locale:"en-GB", tz:"Europe/London",
+      eyebrow:"UEFA Europa League 2026-27", title:"Fixtures, table and bracket",
+      loading:"Loading data…", error:"Data unavailable right now.",
+      updated:"Updated", ft:"FT", off:"Postponed",
+      mdTitle:"Fixtures, matchday by matchday", md:"MD", matchday:"Matchday",
+      seeAllR:"See all results", seeAllM:"See all fixtures", collapse:"Collapse", nMatches:"matches",
+      played:"played", of:"of",
+      stTitle:"The table",
+      cPos:"#", cClub:"Club", cP:"P", cW:"W", cD:"D", cL:"L", cGF:"GF", cGA:"GA", cGD:"+/−", cPts:"Pts", cForm:"Form", fW:"W", fD:"D", fL:"L",
+      zOk:"1-8 · straight to the last 16", zPo:"9-24 · knockout play-offs", zOut:"25-36 · eliminated",
+      noGames:"No matches played yet: all 36 clubs are level and listed alphabetically. The table takes shape from matchday 1.",
+      brTitle:"The knockout bracket",
+      brNote:"Projected from the table. The play-offs pair up brackets: \"21/22\" meets \"11/12\" — the draw decides which of the two clubs goes to this side. Click a team to move it through.",
+      brDrawn:"Draw made: real ties shown.",
+      rPo:"Play-offs", rR16:"Round of 16", rQf:"Quarter-finals", rSf:"Semi-finals", rF:"Final",
+      silver:"Silver side", blue:"Blue side", secondLeg:"plays the second leg at home", finalHome:"The silver-side team is the home team in the final.",
+      champion:"Winner", tbd:"Winner PO", auto:"Fill from the table", clear:"Clear",
+      draw:"Simulate the draw", drawn:"Draw simulated — hit it again for another", drawReal:"The real play-off draw takes place on 29 January 2027.",
+      outTitle:"Eliminated (25th-36th)", scroll:"Scroll to see the whole bracket",
+      footer:"SportMonks data, refreshed automatically. Table sorted under Article 18 of the UEFA regulations: points, goal difference, goals scored, away goals, wins, away wins, then opponents’ combined points, goal difference and goals, then disciplinary points." },
+    es:{ locale:"es-ES", tz:"Europe/Madrid",
+      eyebrow:"Liga Europa 2026-2027", title:"Partidos, clasificación y cuadro",
+      loading:"Cargando datos…", error:"Datos no disponibles por ahora.",
+      updated:"Actualizado", ft:"Final", off:"Aplazado",
+      mdTitle:"Los partidos, jornada a jornada", md:"J", matchday:"Jornada",
+      seeAllR:"Ver todos los resultados", seeAllM:"Ver todos los partidos", collapse:"Reducir", nMatches:"partidos",
+      played:"jugados", of:"de",
+      stTitle:"La clasificación",
+      cPos:"#", cClub:"Club", cP:"PJ", cW:"G", cD:"E", cL:"P", cGF:"GF", cGA:"GC", cGD:"+/−", cPts:"Pts", cForm:"Forma", fW:"G", fD:"E", fL:"P",
+      zOk:"1-8 · a octavos", zPo:"9-24 · play-offs", zOut:"25-36 · eliminados",
+      noGames:"Ningún partido jugado: los 36 clubes están empatados y aparecen por orden alfabético. La clasificación tomará forma en la 1.ª jornada.",
+      brTitle:"El cuadro de la fase final",
+      brNote:"Proyección según la clasificación. Los play-offs enfrentan parejas: «21/22» contra «11/12»; el sorteo decidirá cuál de los dos clubes va a este lado. Haz clic en un equipo para hacerlo avanzar.",
+      brDrawn:"Sorteo realizado: eliminatorias reales.",
+      rPo:"Play-offs", rR16:"Octavos", rQf:"Cuartos", rSf:"Semifinales", rF:"Final",
+      silver:"Lado plateado", blue:"Lado azul", secondLeg:"juega la vuelta en casa", finalHome:"El equipo del lado plateado es el local en la final.",
+      champion:"Campeón", tbd:"Ganador PO", auto:"Rellenar según la clasificación", clear:"Borrar",
+      draw:"Simular el sorteo", drawn:"Sorteo simulado — vuelve a pulsar para otro", drawReal:"El sorteo real de los play-offs es el 29 de enero de 2027.",
+      outTitle:"Eliminados (25.º-36.º)", scroll:"Desliza para ver todo el cuadro",
+      footer:"Datos de SportMonks, actualizados automáticamente. Clasificación según el artículo 18 del reglamento UEFA: puntos, diferencia de goles, goles a favor, goles fuera, victorias, victorias fuera, luego puntos, diferencia de goles y goles acumulados de los rivales, puntos disciplinarios." },
+    pt:{ locale:"pt-BR", tz:"America/Sao_Paulo",
+      eyebrow:"Liga Europa 2026-2027", title:"Jogos, classificação e chaveamento",
+      loading:"Carregando dados…", error:"Dados indisponíveis no momento.",
+      updated:"Atualizado", ft:"Fim", off:"Adiado",
+      mdTitle:"Os jogos, rodada a rodada", md:"R", matchday:"Rodada",
+      seeAllR:"Ver todos os resultados", seeAllM:"Ver todos os jogos", collapse:"Recolher", nMatches:"jogos",
+      played:"jogados", of:"de",
+      stTitle:"A classificação",
+      cPos:"#", cClub:"Clube", cP:"J", cW:"V", cD:"E", cL:"D", cGF:"GP", cGA:"GC", cGD:"+/−", cPts:"Pts", cForm:"Forma", fW:"V", fD:"E", fL:"D",
+      zOk:"1-8 · direto às oitavas", zPo:"9-24 · play-offs", zOut:"25-36 · eliminados",
+      noGames:"Nenhum jogo disputado: os 36 clubes estão empatados e aparecem em ordem alfabética. A classificação ganha forma a partir da 1ª rodada.",
+      brTitle:"O chaveamento do mata-mata",
+      brNote:"Projeção a partir da classificação. Os play-offs opõem duplas: “21/22” contra “11/12” — o sorteio decide qual dos dois clubes fica deste lado. Clique num time para avançá-lo.",
+      brDrawn:"Sorteio realizado: confrontos reais.",
+      rPo:"Play-offs", rR16:"Oitavas", rQf:"Quartas", rSf:"Semifinais", rF:"Final",
+      silver:"Lado prateado", blue:"Lado azul", secondLeg:"joga a volta em casa", finalHome:"A equipa do lado prateado é a visitada na final.",
+      champion:"Campeão", tbd:"Vencedor PO", auto:"Preencher pela classificação", clear:"Limpar",
+      draw:"Simular o sorteio", drawn:"Sorteio simulado — clique de novo para outro", drawReal:"O sorteio real dos play-offs é a 29 de janeiro de 2027.",
+      outTitle:"Eliminados (25º-36º)", scroll:"Arraste para ver o chaveamento inteiro",
+      footer:"Dados SportMonks, atualizados automaticamente. Classificação pelo artigo 18 do regulamento da UEFA: pontos, saldo de gols, gols marcados, gols fora, vitórias, vitórias fora, depois pontos, saldo e gols somados dos adversários, pontos disciplinares." },
+    it:{ locale:"it-IT", tz:"Europe/Rome",
+      eyebrow:"Europa League 2026-2027", title:"Partite, classifica e tabellone",
+      loading:"Caricamento dati…", error:"Dati non disponibili al momento.",
+      updated:"Aggiornato", ft:"Fine", off:"Rinviata",
+      mdTitle:"Le partite, giornata per giornata", md:"G", matchday:"Giornata",
+      seeAllR:"Vedi tutti i risultati", seeAllM:"Vedi tutte le partite", collapse:"Riduci", nMatches:"partite",
+      played:"giocate", of:"su",
+      stTitle:"La classifica",
+      cPos:"#", cClub:"Club", cP:"G", cW:"V", cD:"N", cL:"P", cGF:"GF", cGA:"GS", cGD:"+/−", cPts:"Pti", cForm:"Forma", fW:"V", fD:"N", fL:"P",
+      zOk:"1-8 · agli ottavi", zPo:"9-24 · spareggi", zOut:"25-36 · eliminate",
+      noGames:"Nessuna partita giocata: le 36 squadre sono a pari punti e sono elencate in ordine alfabetico. La classifica prenderà forma dalla 1ª giornata.",
+      brTitle:"Il tabellone della fase finale",
+      brNote:"Proiezione sulla classifica. Gli spareggi accoppiano le coppie: «21/22» contro «11/12» — il sorteggio decide quale delle due squadre va da questo lato. Clicca una squadra per farla avanzare.",
+      brDrawn:"Sorteggio effettuato: sfide reali.",
+      rPo:"Spareggi", rR16:"Ottavi", rQf:"Quarti", rSf:"Semifinali", rF:"Finale",
+      silver:"Lato argento", blue:"Lato blu", secondLeg:"gioca il ritorno in casa", finalHome:"La squadra del lato argento è quella di casa in finale.",
+      champion:"Vincitrice", tbd:"Vincente SP", auto:"Compila dalla classifica", clear:"Cancella",
+      draw:"Simula il sorteggio", drawn:"Sorteggio simulato — rilancia per un altro", drawReal:"Il sorteggio vero degli spareggi è il 29 gennaio 2027.",
+      outTitle:"Eliminate (25ª-36ª)", scroll:"Scorri per vedere tutto il tabellone",
+      footer:"Dati SportMonks, aggiornati automaticamente. Classifica secondo l’articolo 18 del regolamento UEFA: punti, differenza reti, reti fatte, reti in trasferta, vittorie, vittorie in trasferta, poi punti, differenza reti e reti complessive delle avversarie, punti disciplinari." }
+  };
+  var T = L10N[LANG] || L10N.fr;
+
+  /* ---------------------------------------------------------------- Outils */
+  /** Nom long + nom court : le CSS choisit celui qui tient. */
+  function nom(team, cls) {
+    var n = el("span", "nm" + (cls ? " " + cls : ""));
+    n.appendChild(el("span", "lg", team.name));
+    n.appendChild(el("span", "sm", team.short));
+    n.title = team.name;
+    return n;
+  }
+  function el(tag, cls, txt) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (txt != null) n.textContent = txt;
+    return n;
+  }
+  function crest(t) {
+    var d = el("span", "crest");
+    if (t && t.logo) {
+      var i = new Image();
+      i.src = t.logo; i.alt = ""; i.loading = "lazy"; i.decoding = "async";
+      i.onerror = function () { d.removeChild(i); };
+      d.appendChild(i);
+    }
+    return d;
+  }
+  var fmtDay = new Intl.DateTimeFormat(T.locale, { timeZone: T.tz, weekday: "long", day: "numeric", month: "long" });
+  var fmtTime = new Intl.DateTimeFormat(T.locale, { timeZone: T.tz, hour: "2-digit", minute: "2-digit" });
+  var fmtStamp = new Intl.DateTimeFormat(T.locale, { timeZone: T.tz, day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+  function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
+  var store = {
+    get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+
+  /* -------------------------------------------------------------- Classement
+   * Article 18 du règlement UCL 2026/27 (documents.uefa.com), à égalité de
+   * points :
+   *   1 différence de buts · 2 buts marqués · 3 buts marqués à l'extérieur
+   *   4 victoires · 5 victoires à l'extérieur
+   *   6 points cumulés des adversaires de phase de ligue
+   *   7 différence de buts cumulée des adversaires
+   *   8 buts marqués cumulés des adversaires
+   *   9 points disciplinaires (le plus bas d'abord) · 10 coefficient de club
+   * Pas de confrontation directe : les 36 clubs ne s'affrontent pas tous.
+   *
+   * Critères 6 à 8 : on somme sur les HUIT adversaires tirés au sort, joués ou
+   * non. En fin de phase les deux lectures se confondent ; en cours de saison,
+   * c'est la seule qui ne bascule pas selon l'ordre du calendrier.
+   *
+   * Le 10e critère n'est publié par aucune API : à égalité parfaite on retombe
+   * sur l'ordre alphabétique, neutre et stable. Le cas ne se présente en
+   * pratique qu'avant la 1re journée, où le widget le signale explicitement.
+   */
+  function classement(data) {
+    var R = {};
+    Object.keys(data.teams).forEach(function (c) {
+      R[c] = { code: c, p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, agf: 0, aw: 0, pts: 0, form: [], adv: [] };
+    });
+    // Les huit adversaires tirés au sort, joués ou non (critères 6 à 8).
+    data.matchdays.forEach(function (j) {
+      j.matches.forEach(function (m) {
+        if (R[m.h] && R[m.a]) { R[m.h].adv.push(m.a); R[m.a].adv.push(m.h); }
+      });
+    });
+    data.matchdays.forEach(function (j) {
+      j.matches.forEach(function (m) {
+        if (m.st !== "FT" || m.hg == null || m.ag == null) return;
+        var h = R[m.h], a = R[m.a];
+        if (!h || !a) return;
+        h.p++; a.p++;
+        h.gf += m.hg; h.ga += m.ag;
+        a.gf += m.ag; a.ga += m.hg; a.agf += m.ag;
+        if (m.hg > m.ag)      { h.w++; h.pts += 3; a.l++; h.form.push("W"); a.form.push("L"); }
+        else if (m.hg < m.ag) { a.w++; a.aw++; a.pts += 3; h.l++; a.form.push("W"); h.form.push("L"); }
+        else                  { h.d++; a.d++; h.pts++; a.pts++; h.form.push("D"); a.form.push("D"); }
+      });
+    });
+    var out = Object.keys(R).map(function (c) {
+      var r = R[c];
+      r.gd = r.gf - r.ga;
+      r.form = r.form.slice(-5);
+      r.disc = data.teams[c].disc || 0;
+      r.name = data.teams[c].name;
+      return r;
+    });
+    out.forEach(function (r) {
+      r.opts = 0; r.ogd = 0; r.ogf = 0;
+      r.adv.forEach(function (c) { var o = R[c]; r.opts += o.pts; r.ogd += o.gf - o.ga; r.ogf += o.gf; });
+    });
+    out.sort(function (x, y) {
+      return y.pts - x.pts || y.gd - x.gd || y.gf - x.gf || y.agf - x.agf ||
+             y.w - x.w || y.aw - x.aw ||
+             y.opts - x.opts || y.ogd - x.ogd || y.ogf - x.ogf ||
+             x.disc - y.disc ||
+             x.name.localeCompare(y.name, T.locale);
+    });
+    out.forEach(function (r, i) { r.pos = i + 1; });
+    return out;
+  }
+
+  /* ---------------------------------------------------------------- Bracket
+   * Format UEFA depuis 2024-25 : 1-8 directement en 8es, 9-24 aux barrages,
+   * 25-36 éliminés.
+   *
+   * L'arbre ci-dessous EST celui de l'annexe B du règlement UCL, lu de haut en
+   * bas : quatre positions du côté argenté, quatre du côté bleu. Les deux ne
+   * peuvent se rencontrer qu'en finale, où l'équipe du côté argenté est
+   * l'équipe recevante à des fins administratives (art. 19.05).
+   *
+   *   po    : la paire de barrage qui alimente la position (art. 19.02) —
+   *           non-tête de série d'abord, tête de série ensuite
+   *   seed  : la tête de série qui attend en 8es (art. 19.03)
+   *
+   * Une position notée « 21 » vaut en réalité « 21 ou 22 » : le tirage décide
+   * lequel des deux clubs de la paire part de ce côté de l'arbre. Tant qu'il
+   * n'a pas eu lieu, on retient une convention équilibrée — chaque moitié
+   * reçoit un club de chaque paire — signalée comme une projection.
+   *
+   * Dans chaque affiche, le club du bas reçoit au match retour : tête de série
+   * en barrage et en 8es (art. 19.02 §3 et 19.03 §3), rangs 1 à 4 en quart et
+   * rangs 1 et 2 en demie (art. 19.04).
+   */
+  var ANNEXE_B = [
+    { cote: "argent", po: [21, 12], seed: 5 },
+    { cote: "argent", po: [20, 13], seed: 4 },
+    { cote: "argent", po: [24,  9], seed: 8 },
+    { cote: "argent", po: [17, 16], seed: 1 },
+    { cote: "bleu",   po: [22, 11], seed: 6 },
+    { cote: "bleu",   po: [19, 14], seed: 3 },
+    { cote: "bleu",   po: [23, 10], seed: 7 },
+    { cote: "bleu",   po: [18, 15], seed: 2 }
+  ];
+
+  /**
+   * Notation de l'annexe B : une case de barrage ou de 8e ne désigne pas une
+   * position ferme mais une PAIRE — « 21/22 » se lit « le club classé 21e ou
+   * 22e ». Le tirage décide lequel des deux part de ce côté de l'arbre, et
+   * c'est la paire {11,12} qui affronte la paire {21,22}, jamais 21 contre 22.
+   */
+  function paire(n) {
+    if (!n) return null;
+    return n % 2 ? n + "/" + (n + 1) : (n - 1) + "/" + n;
+  }
+
+  /**
+   * Le tirage simulé. Toute la liberté que laisse l'annexe B tient en douze
+   * pile ou face : pour chacune des douze paires ({1,2}, {3,4} … {23,24}),
+   * lequel des deux clubs part du côté argenté ? Soit 4096 tirages possibles,
+   * et ces douze bits suffisent à les décrire tous — ils couvrent aussi bien
+   * la répartition entre les deux moitiés que l'appariement des barrages
+   * (11 contre 21 ou contre 22, selon les tirages des deux paires).
+   *
+   * `tirage` vaut null tant que le lecteur n'a rien simulé : on affiche alors
+   * la convention par défaut, identique pour tout le monde.
+   */
+  var tirage = null;
+  try {
+    var brut = store.get("c3b26-tirage");
+    if (brut) tirage = JSON.parse(brut);
+  } catch (e) { tirage = null; }
+
+  /** Quelle position occupe réellement la case `slot` de l'annexe B ? */
+  function resoudre(slot) {
+    if (!tirage || !slot) return slot;
+    var bas = slot % 2 ? slot : slot - 1;   // membre impair de la paire
+    if (!tirage[bas]) return slot;
+    return slot === bas ? bas + 1 : bas;
+  }
+
+  function simulerTirage() {
+    tirage = {};
+    for (var bas = 1; bas <= 23; bas += 2) tirage[bas] = Math.random() < 0.5;
+    store.set("c3b26-tirage", JSON.stringify(tirage));
+    rendre();
+  }
+
+  function construire(rows) {
+    var byPos = {};
+    rows.forEach(function (r) { byPos[r.pos] = r.code; });
+    var po = ANNEXE_B.map(function (e, i) {
+      return { id: "po" + i, a: byPos[resoudre(e.po[0])] || null, b: byPos[resoudre(e.po[1])] || null,
+               sa: e.po[0], sb: e.po[1] };
+    });
+    // En 8es, le vainqueur du barrage est en haut, la tête de série en bas :
+    // c'est elle qui reçoit au retour.
+    var r16 = ANNEXE_B.map(function (e, i) {
+      return { id: "r16" + i, a: null, b: byPos[resoudre(e.seed)] || null, sa: null, sb: e.seed, from: "po" + i };
+    });
+    var qf = [0, 1, 2, 3].map(function (i) { return { id: "qf" + i, a: null, b: null, from: ["r16" + (2 * i), "r16" + (2 * i + 1)] }; });
+    var sf = [0, 1].map(function (i) { return { id: "sf" + i, a: null, b: null, from: ["qf" + (2 * i), "qf" + (2 * i + 1)] }; });
+    var f  = [{ id: "f0", a: null, b: null, from: ["sf0", "sf1"] }];
+    return { po: po, r16: r16, qf: qf, sf: sf, f: f };
+  }
+
+  var TOURS = ["po", "r16", "qf", "sf", "f"];
+
+  /**
+   * Propage les pronostics : chaque vainqueur retenu remplit le tour suivant.
+   *
+   * Un pronostic dit « je vois ce club passer ce tour-ci », pas « je vois ce
+   * club gagner la rencontre n° 3 ». La nuance compte : le classement bouge à
+   * chaque journée, donc les rencontres sont continuellement rebattues. Rangés
+   * par emplacement, les pronostics étaient effacés en bloc au moindre
+   * changement de tête de classement ; rangés par équipe et par tour, ils
+   * survivent tant que le club reste engagé à ce tour.
+   */
+  function propager(br, picks) {
+    function gagnant(t, tour) {
+      var p = picks[tour] || {};
+      var a = t.a && p[t.a], b = t.b && p[t.b];
+      if (a && !b) return t.a;
+      if (b && !a) return t.b;
+      return null;   // aucune des deux, ou les deux : rencontre non tranchée
+    }
+    br.r16.forEach(function (t, i) { t.a = gagnant(br.po[i], "po"); });
+    br.qf.forEach(function (t, i) { t.a = gagnant(br.r16[2 * i], "r16"); t.b = gagnant(br.r16[2 * i + 1], "r16"); });
+    br.sf.forEach(function (t, i) { t.a = gagnant(br.qf[2 * i], "qf"); t.b = gagnant(br.qf[2 * i + 1], "qf"); });
+    br.f[0].a = gagnant(br.sf[0], "sf"); br.f[0].b = gagnant(br.sf[1], "sf");
+    return gagnant(br.f[0], "f");
+  }
+
+  /* ------------------------------------------------------------------ État */
+  var DATA = null, ROWS = [], BR = null, RANK = {};
+  var picks = {};
+  try { picks = JSON.parse(store.get("c3b26-picks2") || "{}") || {}; } catch (e) { picks = {}; }
+  TOURS.forEach(function (k) { if (!picks[k] || typeof picks[k] !== "object") picks[k] = {}; });
+  var mdIdx = 0, focus = null;
+  // Replié par défaut : c'est tout l'intérêt. L'état survit au rendu toutes
+  // les 3 minutes, sinon la liste se refermerait sous les yeux du lecteur.
+  var matchsOuverts = store.get("c3b26-open") === "1";
+
+  /* -------------------------------------------------------------- Rendu */
+  var BODY = document.getElementById("c3b-body");
+  var META = document.getElementById("c3b-meta");
+
+  function textesFixes() {
+    Array.prototype.forEach.call(ROOT.querySelectorAll("[data-i]"), function (n) {
+      var k = n.getAttribute("data-i");
+      if (T[k]) n.textContent = T[k];
+    });
+  }
+
+  function rendreMeta() {
+    META.textContent = "";
+    var tous = DATA.matchdays.reduce(function (a, j) { return a.concat(j.matches); }, []);
+    var joues = tous.filter(function (m) { return m.st === "FT"; }).length;
+    META.appendChild(el("span", null, joues + "/" + tous.length + " " + T.played));
+    META.appendChild(el("span", null, "·"));
+    META.appendChild(el("span", null, T.updated + " " + fmtStamp.format(new Date(DATA.updatedAt))));
+  }
+
+  /* --- Journées --- */
+  function sectionJournees() {
+    var s = el("section", "sec");
+    var hd = el("div", "sec-hd");
+    hd.appendChild(el("h3", "sec-t", T.mdTitle));
+    s.appendChild(hd);
+
+    var nav = el("div", "md-nav");
+    DATA.matchdays.forEach(function (j, i) {
+      var b = el("button", null, T.md + j.n);
+      b.type = "button";
+      b.setAttribute("aria-pressed", i === mdIdx ? "true" : "false");
+      b.addEventListener("click", function () { mdIdx = i; rendre(); });
+      nav.appendChild(b);
+    });
+    s.appendChild(nav);
+
+    var j = DATA.matchdays[mdIdx];
+    var d1 = new Date(j.matches[0].iso);
+    var d2 = new Date(j.matches[j.matches.length - 1].iso);
+    var plage = cap(fmtDay.format(d1));
+    if (fmtDay.format(d1) !== fmtDay.format(d2)) plage += " — " + fmtDay.format(d2);
+    s.appendChild(el("div", "md-sub", T.matchday + " " + j.n + " · " + plage));
+
+    // Replié, on garde la première rencontre — elle montre de quoi il s'agit —
+    // et celles du club sélectionné dans le classement, pour que le surlignage
+    // croisé continue de fonctionner.
+    var visibles = matchsOuverts ? j.matches : j.matches.filter(function (m, i) {
+      return i === 0 || focus === m.h || focus === m.a;
+    });
+
+    var jourCourant = null;
+    visibles.forEach(function (m) {
+      var d = new Date(m.iso);
+      var jour = fmtDay.format(d);
+      if (jour !== jourCourant) { jourCourant = jour; s.appendChild(el("div", "day", cap(jour))); }
+      s.appendChild(ligneMatch(m));
+    });
+
+    if (visibles.length < j.matches.length || matchsOuverts) {
+      var joue = j.matches.some(function (m) { return m.st === "FT"; });
+      var b = el("button", "more");
+      b.type = "button";
+      b.setAttribute("aria-expanded", matchsOuverts ? "true" : "false");
+      b.appendChild(el("span", null, matchsOuverts ? T.collapse : (joue ? T.seeAllR : T.seeAllM)));
+      if (!matchsOuverts) b.appendChild(el("span", "n", j.matches.length + " " + T.nMatches));
+      b.addEventListener("click", function () {
+        matchsOuverts = !matchsOuverts;
+        store.set("c3b26-open", matchsOuverts ? "1" : "0");
+        rendre();
+      });
+      s.appendChild(b);
+    }
+    return s;
+  }
+
+  function ligneMatch(m) {
+    var th = DATA.teams[m.h], ta = DATA.teams[m.a];
+    var fini = m.st === "FT";
+    var row = el("div", "m" + (fini ? " done" : "") +
+      ((focus === m.h || focus === m.a) ? " hl" : ""));
+
+    var h = el("div", "side h");
+    h.appendChild(nom(th, fini && m.hg > m.ag ? "win" : ""));
+    h.appendChild(crest(th));
+
+    var sc = el("div", "sc" + (m.st === "OFF" ? " off" : ""));
+    if (fini && m.hg != null) {
+      sc.appendChild(el("b", null, m.hg + " – " + m.ag));
+      sc.appendChild(el("span", "st", T.ft));
+    } else {
+      sc.appendChild(el("span", "t", fmtTime.format(new Date(m.iso))));
+      if (m.st === "OFF") sc.appendChild(el("span", "st", T.off));
+    }
+
+    var a = el("div", "side a");
+    a.appendChild(crest(ta));
+    a.appendChild(nom(ta, fini && m.ag > m.hg ? "win" : ""));
+
+    row.appendChild(h); row.appendChild(sc); row.appendChild(a);
+    return row;
+  }
+
+  /* --- Classement --- */
+  function sectionClassement() {
+    var s = el("section", "sec");
+    var hd = el("div", "sec-hd");
+    hd.appendChild(el("h3", "sec-t", T.stTitle));
+    s.appendChild(hd);
+
+    var tb = el("table");
+    var thead = el("thead"), tr = el("tr");
+    [["pos", T.cPos, ""], ["club", T.cClub, "l"], ["p", T.cP, ""],
+     ["w", T.cW, "col-opt"], ["d", T.cD, "col-opt"], ["l", T.cL, "col-opt"],
+     ["gf", T.cGF, "col-opt2"], ["ga", T.cGA, "col-opt2"], ["gd", T.cGD, ""],
+     ["pts", T.cPts, ""], ["form", T.cForm, "col-opt"]
+    ].forEach(function (c) {
+      var th = el("th", c[2] + (c[0] === "club" ? " l" : ""), c[1]);
+      tr.appendChild(th);
+    });
+    thead.appendChild(tr); tb.appendChild(thead);
+
+    var tbody = el("tbody");
+    ROWS.forEach(function (r) {
+      var t = DATA.teams[r.code];
+      var zone = r.pos <= 8 ? "z-ok" : (r.pos <= 24 ? "z-po" : "z-out");
+      var line = el("tr", zone + (focus === r.code ? " hl" : ""));
+      line.addEventListener("click", function () { focus = (focus === r.code ? null : r.code); rendre(); });
+
+      line.appendChild(el("td", "pos", String(r.pos)));
+
+      var tdc = el("td", "club");
+      var side = el("div", "side");
+      side.appendChild(crest(t));
+      side.appendChild(nom(t));
+      tdc.appendChild(side); line.appendChild(tdc);
+
+      line.appendChild(el("td", null, String(r.p)));
+      line.appendChild(el("td", "col-opt", String(r.w)));
+      line.appendChild(el("td", "col-opt", String(r.d)));
+      line.appendChild(el("td", "col-opt", String(r.l)));
+      line.appendChild(el("td", "col-opt2", String(r.gf)));
+      line.appendChild(el("td", "col-opt2", String(r.ga)));
+
+      var tdg = el("td", "gd");
+      tdg.appendChild(el("span", r.gd > 0 ? "p" : (r.gd < 0 ? "n" : ""), (r.gd > 0 ? "+" : "") + r.gd));
+      line.appendChild(tdg);
+
+      line.appendChild(el("td", "pts", String(r.pts)));
+
+      var tdf = el("td", "col-opt");
+      var f = el("span", "form");
+      // La classe reste W/D/L (couleur), la lettre est localisée : V/N/D en
+      // français, G/E/P en espagnol…
+      r.form.forEach(function (x) { f.appendChild(el("i", x, T["f" + x])); });
+      tdf.appendChild(f); line.appendChild(tdf);
+
+      tbody.appendChild(line);
+    });
+    tb.appendChild(tbody); s.appendChild(tb);
+
+    if (!ROWS.some(function (r) { return r.p > 0; })) {
+      s.appendChild(el("p", "sec-note", T.noGames));
+    }
+
+    var lg = el("div", "legend");
+    [[T.zOk, "var(--ok)"], [T.zPo, "var(--po)"], [T.zOut, "var(--out)"]].forEach(function (z) {
+      var sp = el("span");
+      var i = el("i"); i.style.background = z[1];
+      sp.appendChild(i); sp.appendChild(document.createTextNode(z[0]));
+      lg.appendChild(sp);
+    });
+    s.appendChild(lg);
+    return s;
+  }
+
+  /* --- Bracket --- */
+  function sectionBracket() {
+    var s = el("section", "sec");
+    var hd = el("div", "sec-hd");
+    hd.appendChild(el("h3", "sec-t", T.brTitle));
+    var tools = el("div", "tools");
+    var bDraw = el("button", "btn draw");
+    bDraw.type = "button";
+    bDraw.appendChild(el("span", "d", "🎲"));
+    bDraw.appendChild(el("span", null, T.draw));
+    bDraw.addEventListener("click", function () { simulerTirage(); });
+    tools.appendChild(bDraw);
+    var bAuto = el("button", "btn pri", T.auto);
+    bAuto.type = "button";
+    bAuto.addEventListener("click", function () { remplirAuto(); });
+    var bClr = el("button", "btn", T.clear);
+    bClr.type = "button";
+    bClr.addEventListener("click", function () {
+      picks = {}; TOURS.forEach(function (k) { picks[k] = {}; });
+      sauverPicks(); rendre();
+    });
+    tools.appendChild(bAuto); tools.appendChild(bClr);
+    hd.appendChild(tools);
+    s.appendChild(hd);
+    s.appendChild(el("p", "sec-note", DATA.koDrawn ? T.brDrawn : T.brNote));
+    if (!DATA.koDrawn && tirage) {
+      var badge = el("div", "drawn");
+      badge.appendChild(el("span", null, "🎲"));
+      badge.appendChild(el("span", null, T.drawn));
+      s.appendChild(badge);
+      s.appendChild(el("p", "sec-note", T.drawReal));
+    }
+
+    var hint = el("div", "hint");
+    hint.appendChild(document.createTextNode("↔ " + T.scroll));
+    s.appendChild(hint);
+
+    var wrap = el("div", "br-wrap");
+    var br = el("div", "br");
+
+    var cols = [
+      { key: "po",  titre: T.rPo,  date: DATA.calendar.po,  span: 1 },
+      { key: "r16", titre: T.rR16, date: DATA.calendar.r16, span: 1 },
+      { key: "qf",  titre: T.rQf,  date: DATA.calendar.qf,  span: 2 },
+      { key: "sf",  titre: T.rSf,  date: DATA.calendar.sf,  span: 4 },
+      { key: "f",   titre: T.rF,   date: DATA.calendar.f,   span: 8 }
+    ];
+    cols.forEach(function (c) {
+      var h = el("div", "br-hd", c.titre);
+      h.appendChild(el("em", null, c.date || ""));
+      br.appendChild(h);
+    });
+    cols.forEach(function (c, ci) {
+      var col = el("div", "col");
+      BR[c.key].forEach(function (t, i) {
+        var cls = "cell";
+        if (ci === cols.length - 1) cls += " end";
+        else if (c.key === "po") cls += " flat";
+        else cls += (i % 2 === 0 ? " up" : " dn");
+        if (ci > 0) cls += " in";
+        var cell = el("div", cls);
+        cell.style.gridRow = "span " + c.span;
+        if (c.key === "sf") {
+          // Une demi-finale = une moitié de tableau : c'est là que le côté
+          // argenté et le côté bleu se nomment le plus naturellement.
+          var moitie = el("div", "half");
+          var lab = el("div", "half-t");
+          var pastille = el("i");
+          pastille.style.background = i === 0 ? "var(--out)" : "var(--acc)";
+          lab.appendChild(pastille);
+          lab.appendChild(document.createTextNode(i === 0 ? T.silver : T.blue));
+          moitie.appendChild(lab);
+          moitie.appendChild(boiteTie(t, c.key));
+          cell.appendChild(moitie);
+        } else {
+          cell.appendChild(boiteTie(t, c.key));
+        }
+        col.appendChild(cell);
+      });
+      br.appendChild(col);
+    });
+    wrap.appendChild(br);
+    s.appendChild(wrap);
+
+    // Vainqueur
+    var champ = propager(BR, picks);
+    if (champ) {
+      var cup = el("div", "cup");
+      cup.appendChild(document.createTextNode("🏆 " + T.champion + " : " + DATA.teams[champ].name));
+      s.appendChild(cup);
+    }
+
+    var leg = el("div", "br-leg");
+    var l1 = el("span");
+    l1.appendChild(el("u"));
+    l1.appendChild(document.createTextNode(T.secondLeg));
+    leg.appendChild(l1);
+    leg.appendChild(el("span", null, T.finalHome));
+    s.appendChild(leg);
+
+    // Éliminés
+    var elim = ROWS.filter(function (r) { return r.pos >= 25; });
+    if (elim.length) {
+      var box = el("div", "br-out");
+      box.appendChild(el("h4", null, T.outTitle));
+      var chips = el("div", "chips");
+      elim.forEach(function (r) {
+        var t = DATA.teams[r.code];
+        var ch = el("span", "chip" + (focus === r.code ? " hl" : ""));
+        ch.appendChild(crest(t));
+        ch.appendChild(document.createTextNode(r.pos + ". " + t.short));
+        chips.appendChild(ch);
+      });
+      box.appendChild(chips);
+      s.appendChild(box);
+    }
+    return s;
+  }
+
+  function boiteTie(t, round) {
+    var pr = picks[round] || {};
+    var gagne = !!((t.a && pr[t.a]) || (t.b && pr[t.b]));
+    var box = el("div", "tie" + (round === "f" ? " final" : "") + (round === "f" && gagne ? " champ" : ""));
+    box.appendChild(ligneTie(t, "a", round));
+    box.appendChild(ligneTie(t, "b", round));
+    return box;
+  }
+
+  function ligneTie(t, side, round) {
+    var code = t[side];
+    var slot = side === "a" ? t.sa : t.sb;
+    // Barrages et 8es : la paire, comme sur le schéma de l'UEFA, parce que le
+    // tirage n'a pas encore tranché à l'intérieur de la paire. Ensuite, le rang
+    // réel du club, la notation par paires n'ayant plus de sens.
+    var parPaire = (round === "po" || round === "r16");
+    var seed = parPaire ? paire(slot) : (code ? RANK[code] : null);
+    // Le bas de l'affiche reçoit au retour ; en finale, c'est le côté argenté,
+    // donc le haut.
+    var retour = round === "f" ? side === "a" : side === "b";
+    var b = el("button", "row" + (retour ? " retour" : ""));
+    b.type = "button";
+    if (!code) {
+      b.className += " ghost";
+      b.disabled = true;
+      b.appendChild(el("span", "seed", seed ? String(seed) : "–"));
+      b.appendChild(el("span", "nm", round === "r16" && side === "a"
+        ? T.tbd + (Number(t.id.replace("r16", "")) + 1) : "—"));
+      return b;
+    }
+    var team = DATA.teams[code];
+    var p = picks[round] || {};
+    var autre = side === "a" ? t.b : t.a;
+    var choisi = !!p[code];
+    var perdant = !choisi && !!(autre && p[autre]);
+    if (choisi) b.className += " pick";
+    if (perdant) b.className += " drop";
+    if (focus === code) b.className += " hl";
+    b.appendChild(el("span", "seed", seed ? String(seed) : "·"));
+    b.appendChild(crest(team));
+    b.appendChild(el("span", "nm", team.short));
+    b.addEventListener("click", function () {
+      var q = picks[round] || (picks[round] = {});
+      if (q[code]) delete q[code];
+      else { q[code] = 1; if (autre) delete q[autre]; }
+      nettoyerPicks();
+      sauverPicks();
+      rendre();
+    });
+    return b;
+  }
+
+  /**
+   * Un pronostic devenu impossible saute : le classement bouge à chaque
+   * journée, et un club peut quitter la rencontre sur laquelle il avait été
+   * choisi. Les pronostics encore valides, eux, sont conservés tels quels.
+   *
+   * Cinq passes : supprimer un pronostic vide le tour suivant, ce qui peut à
+   * son tour invalider un pronostic plus loin dans l'arbre.
+   *
+   * Le nettoyage est réécrit dans le stockage, sinon les pronostics périmés y
+   * survivraient indéfiniment et seraient relus à chaque ouverture de page.
+   */
+  function nettoyerPicks() {
+    var avant = JSON.stringify(picks);
+    for (var passe = 0; passe < 5; passe++) {
+      propager(BR, picks);
+      TOURS.forEach(function (k) {
+        var p = picks[k] || (picks[k] = {});
+        var engages = {};
+        BR[k].forEach(function (t) { if (t.a) engages[t.a] = 1; if (t.b) engages[t.b] = 1; });
+        // un club qui n'est plus engagé à ce tour perd son pronostic
+        Object.keys(p).forEach(function (code) { if (!engages[code]) delete p[code]; });
+        // et si le rebrassage met deux favoris face à face, on rend la main
+        // au lecteur plutôt que de trancher à sa place
+        BR[k].forEach(function (t) {
+          if (t.a && t.b && p[t.a] && p[t.b]) { delete p[t.a]; delete p[t.b]; }
+        });
+      });
+    }
+    if (JSON.stringify(picks) !== avant) sauverPicks();
+  }
+  function sauverPicks() { store.set("c3b26-picks2", JSON.stringify(picks)); }
+
+  /** Fait avancer partout la mieux classée — un bracket complet en un clic. */
+  function remplirAuto() {
+    var rang = RANK;
+    picks = {};
+    TOURS.forEach(function (k) { picks[k] = {}; });
+    TOURS.forEach(function (k) {
+      propager(BR, picks);
+      BR[k].forEach(function (t) {
+        if (!t.a && !t.b) return;
+        if (!t.a || !t.b) { picks[k][t.a || t.b] = 1; return; }
+        picks[k][(rang[t.a] || 99) <= (rang[t.b] || 99) ? t.a : t.b] = 1;
+      });
+    });
+    sauverPicks();
+    rendre();
+  }
+
+  /* ------------------------------------------------------------------ Boucle */
+  function rendre() {
+    ROWS = classement(DATA);
+    RANK = {};
+    ROWS.forEach(function (r) { RANK[r.code] = r.pos; });
+    BR = construire(ROWS);
+    nettoyerPicks();
+    BODY.textContent = "";
+    rendreMeta();
+    BODY.appendChild(sectionJournees());
+    BODY.appendChild(sectionClassement());
+    BODY.appendChild(sectionBracket());
+    pret = true;
+    hauteur();
+  }
+
+  /** Journée à ouvrir : la première non terminée, sinon la dernière. */
+  function journeeCourante(d) {
+    for (var i = 0; i < d.matchdays.length; i++) {
+      if (d.matchdays[i].matches.some(function (m) { return m.st !== "FT"; })) return i;
+    }
+    return d.matchdays.length - 1;
+  }
+
+  /* Hauteur de l'iframe → page parente (même convention que les autres widgets).
+   *
+   * On se tait tant que les données ne sont pas rendues. Sinon le premier
+   * message part au bout de 13 ms avec la hauteur du « Chargement… », soit
+   * 240 px : la page parente l'applique, efface sa réserve d'espace, puis
+   * encaisse un saut de plus de 2000 px quand le vrai contenu arrive. C'est
+   * exactement le décalage de mise en page que la réserve devait empêcher. */
+  var derniere = 0, pret = false;
+  function hauteur() {
+    if (!pret || window.parent === window) return;
+    var h = Math.ceil(document.documentElement.getBoundingClientRect().height);
+    if (Math.abs(h - derniere) < 2) return;
+    derniere = h;
+    try { window.parent.postMessage({ type: "busa-c3b-height", height: h }, "*"); } catch (e) {}
+  }
+  window.addEventListener("resize", hauteur);
+  // On observe la racine du widget, pas `documentElement` : l'élément racine a
+  // la taille du viewport de l'iframe, que la page parente fixe elle-même, donc
+  // il ne bouge pas quand le contenu se réagence.
+  if (window.ResizeObserver) new ResizeObserver(hauteur).observe(ROOT);
+  // Et par-dessus, une vérification périodique. Ni `resize` ni ResizeObserver
+  // ne se sont révélés fiables à l'essai lorsque la page parente redimensionne
+  // l'iframe : le contenu passait de 2512 à 2748 px sans qu'aucun message ne
+  // parte, et le widget se retrouvait tronqué sur toute page dont la largeur se
+  // stabilise après coup — publicités, colonne latérale, rotation d'un
+  // téléphone. Cette seconde par seconde ne coûte qu'une lecture de hauteur, et
+  // `hauteur()` ne poste rien tant que rien n'a bougé.
+  setInterval(hauteur, 1000);
+
+  function charger(premier) {
+    fetch(SRC + "?t=" + Math.floor(Date.now() / 60000), { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (d) {
+        DATA = d;
+        if (premier) mdIdx = journeeCourante(d);
+        rendre();
+      })
+      .catch(function () {
+        if (!DATA) {
+          BODY.textContent = "";
+          BODY.appendChild(el("div", "load", T.error));
+          // Données injoignables : là, il faut au contraire annoncer la petite
+          // hauteur, pour que la page parente ne garde pas 2500 px de vide.
+          pret = true;
+          hauteur();
+        }
+      });
+  }
+
+  textesFixes();
+  charger(true);
+  // Le JSON ne change qu'après les coups de sifflet final, deux fois par soir
+  // de C1 : le relire toutes les 15 minutes suffit largement pour un onglet
+  // resté ouvert. C'est un fichier statique servi par GitHub Pages — cette
+  // relecture ne coûte aucun appel à SportMonks.
+  setInterval(function () { charger(false); }, 900000);
+})();
+</script>
+<!-- ================= FIN DU BLOC À COLLER ================= -->
+
+</body>
+</html>
