@@ -161,12 +161,12 @@ final, et le classement se recalcule dans la foulée.</p>
 d'un coup et pousse tout le texte qui suit : c'est le décalage de mise en page que
 Google mesure (Cumulative Layout Shift). Valeurs relevées DANS UNE PAGE PARENTE
 RÉELLE, cache vidé, liste des matchs repliée — 2532 px dans un article de 900 px,
-2577 à 700, 2820 en mobile. Mesurer le widget seul ne suffit pas : dans un article
+2621 à 700, 2835 en mobile. Mesurer le widget seul ne suffit pas : dans un article
 il est plus étroit que le viewport, donc plus haut. Le script ci-dessous remplace
 ensuite cette réserve par la hauteur exacte. */
 #busa-c3b-fr{min-height:2535px}
-@media (max-width:760px){#busa-c3b-fr{min-height:2580px}}
-@media (max-width:520px){#busa-c3b-fr{min-height:2825px}}
+@media (max-width:760px){#busa-c3b-fr{min-height:2625px}}
+@media (max-width:520px){#busa-c3b-fr{min-height:2840px}}
 </style>
 
 <iframe id="busa-c3b-fr" src="${PAGES}/bracket-c3.html" title="Bracket de la Ligue Europa 2026-2027 - matchs, classement et phase finale" loading="lazy" scrolling="no" referrerpolicy="strict-origin-when-cross-origin" style="display:block;margin:0 auto;width:100%;max-width:900px;border:0;overflow:hidden"></iframe>
@@ -296,8 +296,8 @@ const bloc = (L) => {
 <link rel="preconnect" href="https://jcrochet-netizen.github.io">
 <style>
 #${id}{min-height:2535px}
-@media (max-width:760px){#${id}{min-height:2580px}}
-@media (max-width:520px){#${id}{min-height:2825px}}
+@media (max-width:760px){#${id}{min-height:2625px}}
+@media (max-width:520px){#${id}{min-height:2840px}}
 </style>
 <iframe id="${id}" src="${PAGES}/${L.fichier}" title="${L.titre}" loading="lazy" scrolling="no" referrerpolicy="strict-origin-when-cross-origin" style="display:block;margin:0 auto;width:100%;max-width:900px;border:0;overflow:hidden"></iframe>
 <noscript><p lang="${L.langAttr}"><a href="${PAGES}/${L.fichier}" rel="noopener">${L.lien}</a> — ${L.js}</p></noscript>
